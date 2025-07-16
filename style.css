@@ -1,0 +1,246 @@
+/* الخط الأساسي */
+ body {
+   body {
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+  background: #0a0a0a;
+}
+
+/* خلفية الجسيمات */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: auto;
+  background-color: #000;
+}
+
+/* الطبقات فوق الجسيمات */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* رأس الصفحة */
+header {
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: rgba(20, 20, 20, 0.9);
+}
+
+/* التنقل */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+h1 {
+  color: #FFD700;
+  margin: 0;
+}
+
+/* روابط التنقل */
+.nav-links .nav-links {
+  display: flex;
+  gap: 20px;
+  direction: ltr; /* كل القائمة من اليسار لليمين */
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+  direction: ltr; /* كل الروابط من اليسار لليمين */
+  text-align: left;
+}
+
+/* زر الوضع الليلي */
+.mode-toggle {
+  background: rgba(255, 215, 0, 0.2);
+  border: 1px solid #FFD700;
+  color: #FFD700;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mode-toggle:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+/* المحتوى الرئيسي */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* عناوين الأقسام */
+h2 {
+  color: #FFD700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* بطاقات الخدمات */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service h3 {
+  color: #FFD700;
+  margin-top: 0;
+}
+
+/* بطاقات المشاريع */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* بطاقات عامة مثل .card */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #FFD700;
+  margin-top: 0;
+}
+
+.card p {
+  color: #ccc;
+}
+
+/* التذييل */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 2rem;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+.fixed-contact {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #FFD700;
+  padding: 15px 25px;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  font-size: 16px;
+  z-index: 1000;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+}
+
+.fixed-contact a {
+  color: #FFD700;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+.fixed-contact a:hover {
+  color: #fff;
+}

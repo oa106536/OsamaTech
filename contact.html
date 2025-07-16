@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اتصل بنا - OsamaTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #FFD700;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: transparent;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 20px;
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      color: #FFD700;
+      margin: 0;
+      margin-left: auto;
+      font-size: 28px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #FFD700;
+    }
+
+    .mode-toggle {
+      background: transparent;
+      border: 1px solid #FFD700;
+      color: #FFD700;
+      padding: 6px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 100px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #FFD700;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      direction: rtl;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button[type="submit"] {
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #e6c200;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #25D366;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebc5d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 1px solid rgba(255, 215, 0, 0.2);
+      color: #FFD700;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+      nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <header>
+    <nav>
+      <h1>OsamaTech</h1>
+      <div class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">الخدمات</a>
+        <a href="contact.html">اتصل بنا</a>
+        <button onclick="toggleMode()" class="mode-toggle" id="modeToggleBtn">🌙/☀️</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2>اتصل بنا</h2>
+    <form action="mailto:oa106536@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="الاسم الكامل" required />
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+      <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+
+    <a class="whatsapp-btn" href="https://wa.me/967782309178" target="_blank">📱 تواصل عبر الواتساب</a>
+  </main>
+
+  <footer>
+    <p>© 2025 OsamaTech. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 400, density: { enable: true, value_area: 800 } },
+        color: { value: "#FFD700" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#FFD700",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 1 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    function toggleMode() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+      const isDark = body.classList.contains("dark-mode");
+
+      const btn = document.getElementById('modeToggleBtn');
+      btn.setAttribute('aria-pressed', isDark);
+
+      const color = isDark ? "#ffffff" : "#FFD700";
+      const pJS = pJSDom[0].pJS;
+      pJS.particles.color.value = color;
+      pJS.particles.line_linked.color = color;
+      pJS.fn.particlesRefresh();
+    }
+  </script>
+</body>
+</html>
